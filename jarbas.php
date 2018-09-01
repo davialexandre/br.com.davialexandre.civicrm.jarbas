@@ -74,3 +74,33 @@ function jarbas_civicrm_disable() {
 function jarbas_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
   return _jarbas_civix_civicrm_upgrade($op, $queue);
 }
+
+/**
+ * Implements hook_civicrm_pageRun().
+ *
+ * @param \CRM_Core_Page $page
+ */
+function jarbas_civicrm_pageRun($page) {
+  _jarbas_civicrm_addResources();
+}
+
+/**
+ * Implements hook_civicrm_buildForm().
+ *
+ * @param string $formName
+ * @param \CRM_Core_Form $form
+ */
+function jarbas_civicrm_buildForm($formName, $form) {
+  _jarbas_civicrm_addResources();
+}
+
+/**
+ * Adds extension resources (JS and CSS files) to Civi
+ */
+function _jarbas_civicrm_addResources() {
+  Civi::resources()->addStyleFile(E::LONG_NAME, 'css/jarbas.css');
+
+  CRM_Core_Region::instance('page-body')->add(array(
+    'template' => 'CRM/Jarbas/QuickActions.tpl',
+  ));
+}

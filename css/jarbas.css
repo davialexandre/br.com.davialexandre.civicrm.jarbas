@@ -1,0 +1,72 @@
+#quick-actions-wrapper {
+  position: fixed;
+  background-color: rgba(239, 239, 239, 0.84);
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  /* filter: blur(1px); */
+  text-align: center;
+}
+
+#quick-actions {
+  color: rgb(70, 67, 84);
+  position: relative;
+  width: 70%;
+  background-color: #ffff;
+  left: 15%;
+  margin-top: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 4px 7px 20px 0px rgba(187, 185, 185, 0.49);
+}
+
+#quick-actions #search-box {
+  padding: 20px;
+}
+
+#quick-actions #search-box input {
+  font-size: 1.5em;
+  border: 0;
+  width: 100%;
+}
+
+#quick-actions #search-box input:focus {
+  outline: 0;
+}
+
+#quick-actions #actions-list ul {
+  margin: 0;
+  padding: 10px
+}
+
+#quick-actions #actions-list li {
+  text-align: left;
+  list-style: none;
+  padding: 10px;
+}
+
+#quick-actions #actions-list li.active {
+  background-color: #c9c9ca69;
+}
+
+#quick-actions #actions-list .menu-action i.fa {
+  float: left;
+  font-size: 2.5em;
+  margin-right: 10px;
+}
+
+#quick-actions #actions-list .menu-action p {
+  margin: 0;
+}
+
+#quick-actions #actions-list .menu-action p.menu-label {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#quick-actions #actions-list .menu-action p.menu-url {
+  font-size: .8em;
+  color: #000000;
+}
