@@ -98,7 +98,10 @@ function jarbas_civicrm_buildForm($formName, $form) {
  * Adds extension resources (JS and CSS files) to Civi
  */
 function _jarbas_civicrm_addResources() {
-  Civi::resources()->addStyleFile(E::LONG_NAME, 'css/jarbas.css');
+  Civi::resources()
+      ->addStyleFile(E::LONG_NAME, 'css/jarbas.css')
+      ->addScriptFile(E::LONG_NAME, 'js/mousetrap.min.js')
+      ->addScriptFile(E::LONG_NAME, 'js/mousetrap-bindings.js');
 
   CRM_Core_Region::instance('page-body')->add(array(
     'template' => 'CRM/Jarbas/QuickActions.tpl',

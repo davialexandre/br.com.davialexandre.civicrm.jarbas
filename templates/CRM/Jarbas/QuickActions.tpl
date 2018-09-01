@@ -1,7 +1,7 @@
-<div id="quick-actions-wrapper">
+<div id="quick-actions-wrapper" class="hidden">
   <div id="quick-actions">
     <div id="search-box">
-      <input type="text">
+      <input type="text" class="mousetrap">
     </div>
     <div id="actions-list">
       <ul>
